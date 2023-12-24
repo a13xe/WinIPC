@@ -1,0 +1,96 @@
+23528515, Waiting to Write, 5
+23528515, Start Writing, 5
+23529400, End Writing, 5
+23529400, Waiting to Write, 11
+23530033, Start Writing, 11
+23530630, End Writing, 11
+23530630, Waiting to Write, 7
+23531291, Start Writing, 7
+23532128, End Writing, 7
+23532129, Waiting to Write, 14
+23532908, Start Writing, 14
+23533781, End Writing, 14
+23533841, Waiting to Write, 13
+23534559, Start Writing, 13
+23536029, End Writing, 13
+23536030, Waiting to Write, 18
+23537354, Start Writing, 18
+23538450, End Writing, 18
+23538476, Waiting to Write, 18
+23539630, Start Writing, 18
+23540653, End Writing, 18
+23540675, Waiting to Write, 15
+23541489, Start Writing, 15
+23542291, End Writing, 15
+23542295, Waiting to Write, 8
+23543433, Start Writing, 8
+23544924, End Writing, 8
+23544931, Waiting to Write, 12
+23545859, Start Writing, 12
+23546761, End Writing, 12
+23546762, Waiting to Write, 13
+23547445, Start Writing, 13
+23548574, End Writing, 13
+23548575, Waiting to Write, 1
+23549174, Start Writing, 1
+23549811, End Writing, 1
+23549817, Waiting to Write, 16
+23550521, Start Writing, 16
+23551542, End Writing, 16
+23551548, Waiting to Write, 3
+23552866, Start Writing, 3
+23554298, End Writing, 3
+23554323, Waiting to Write, 10
+23555483, Start Writing, 10
+23556463, End Writing, 10
+23556464, Waiting to Write, 15
+23557069, Start Writing, 15
+23557938, End Writing, 15
+23557945, Waiting to Write, 6
+23559206, Start Writing, 6
+23560126, End Writing, 6
+23560132, Waiting to Write, 16
+23561000, Start Writing, 16
+23561762, End Writing, 16
+23561763, Waiting to Write, 10
+23563177, Start Writing, 10
+23564272, End Writing, 10
+23564273, Waiting to Write, 17
+23565055, Start Writing, 17
+23566316, End Writing, 17
+23566317, Waiting to Write, 5
+23566847, Start Writing, 5
+23567979, End Writing, 5
+23567980, Waiting to Write, 14
+23569040, Start Writing, 14
+23570545, End Writing, 14
+23570546, Waiting to Write, 16
+23571727, Start Writing, 16
+23572381, End Writing, 16
+23572382, Waiting to Write, 13
+23573892, Start Writing, 13
+23574592, End Writing, 13
+23574593, Waiting to Write, 7
+23575994, Start Writing, 7
+23576740, End Writing, 7
+23576839, Waiting to Write, 15
+23577365, Start Writing, 15
+23578776, End Writing, 15
+23578777, Waiting to Write, 3
+23579426, Start Writing, 3
+23580001, End Writing, 3
+23580002, Waiting to Write, 18
+23580828, Start Writing, 18
+23581434, End Writing, 18
+23581435, Waiting to Write, 14
+23582261, Start Writing, 14
+23583041, End Writing, 14
+23583043, Waiting to Write, 7
+23584383, Start Writing, 7
+23585515, End Writing, 7
+23585516, Waiting to Write, 15
+23586930, Start Writing, 15
+23587722, End Writing, 15
+23587724, Waiting to Write, 17
+23589187, Start Writing, 17
+23590199, End Writing, 17

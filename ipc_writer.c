@@ -1,20 +1,20 @@
 #include "shared.h"
 
-// Logging function declaration
-void logAction(const char* filename, const char* action, int page);
+void logAction(const char* filename, const char* action, int page, DWORD time);
 
 int main() {
-    srand((unsigned int)time(NULL)); // Seed the random number generator
-    FILE *logFile = fopen("writer_log.txt", "w");
+    DWORD startTime, endTime;
+    srand((unsigned int)time(NULL));
+    FILE *logFile = fopen("logs/writer_log.txt", "w");
 
     // Create/Open a memory-mapped file for shared memory
     HANDLE hMapFile = CreateFileMapping(
-        INVALID_HANDLE_VALUE,    // Use paging file - shared memory
-        NULL,                    // Default security attributes
-        PAGE_READWRITE,          // Read/write access
-        0,                       // Maximum object size (high-order DWORD)
-        sizeof(Page) * BUFFER_COUNT, // Buffer size
-        "SharedBuffer");         // Name of mapping object
+        INVALID_HANDLE_VALUE,       // Use paging file - shared memory
+        NULL,                       // Default security attributes
+        PAGE_READWRITE,             // Read/write access
+        0,                          // Maximum object size (high-order DWORD)
+        sizeof(Page) * BUFFER_COUNT,// Buffer size
+        "SharedBuffer");            // Name of mapping object
 
     if (hMapFile == NULL) {
         printf("Could not create file mapping object (%d).\n", GetLastError());
@@ -65,19 +65,25 @@ int main() {
 
     // Main loop for writing
     printf("Writing...");
+    int page_number;
     for (int i = 0; i < PROCESS_COUNT; i++) {
-        Sleep(rand() % 1000 + 500); // Random delay between 0.5 to 1.5 seconds
+        startTime = timeGetTime();
+        int page_number = rand() % BUFFER_COUNT;  // Assign a random page number here
 
-        WaitForSingleObject(canWrite, INFINITE); // Wait until it's possible to write
-        WaitForSingleObject(mutex, INFINITE);    // Wait for exclusive access
+        logAction("logs/writer_log.txt", "Waiting to Write", page_number, startTime);
+        WaitForSingleObject(canWrite, INFINITE);
+        WaitForSingleObject(mutex, INFINITE);
 
-        // Write to a random page in the buffer
-        int page_number = rand() % BUFFER_COUNT;
-        sprintf(sharedBuffer[page_number].data, "Writing data to page %d", page_number);
-        logAction("writer_log.txt", "Write", page_number);
+        startTime = timeGetTime(); // Update the start time after acquiring the mutex
+        logAction("logs/writer_log.txt", "Start Writing", page_number, startTime);
 
-        ReleaseMutex(mutex);                     // Release exclusive access
-        ReleaseSemaphore(canRead, 1, NULL);      // Signal that reading can be done
+        Sleep(rand() % 1000 + 500);
+
+        endTime = timeGetTime();
+        logAction("logs/writer_log.txt", "End Writing", page_number, endTime);
+
+        ReleaseMutex(mutex);
+        ReleaseSemaphore(canRead, 1, NULL);
     }
 
     // Cleanup
@@ -90,10 +96,9 @@ int main() {
     return 0;
 }
 
-void logAction(const char* filename, const char* action, int page) {
+void logAction(const char* filename, const char* action, int page, DWORD time) {
     FILE *file = fopen(filename, "a");
     if (file != NULL) {
-        DWORD time = timeGetTime();
         fprintf(file, "%lu, %s, %d\n", time, action, page);
         fclose(file);
     }

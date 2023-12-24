@@ -1,11 +1,14 @@
 #include "shared.h"
 
-// Logging function declaration
-void logAction(const char* filename, const char* action, int page);
+
+void logAction(const char* filename, const char* action, int page, DWORD time);
+
 
 int main() {
+    DWORD startTime, endTime;
+    char* file = "logs/reader_log.txt";
     srand((unsigned int)time(NULL)); // Seed the random number generator
-    FILE *logFile = fopen("reader_log.txt", "w");
+    FILE *logFile = fopen(file, "w");
 
     // Open a handle to the existing memory-mapped file
     HANDLE hMapFile = OpenFileMapping(
@@ -61,21 +64,27 @@ int main() {
     }
 
     // Main loop for reading
+    int page_number;
     printf("Reading...");
     for (int i = 0; i < PROCESS_COUNT; i++) {
-        Sleep(rand() % 1000 + 500); // Random delay between 0.5 to 1.5 seconds
+        page_number = rand() % BUFFER_COUNT;
 
-        WaitForSingleObject(canRead, INFINITE); // Wait until it's possible to read
-        WaitForSingleObject(mutex, INFINITE);   // Wait for exclusive access
+        startTime = timeGetTime();
+        logAction("logs/reader_log.txt", "Waiting to Read", page_number, startTime);
 
-        // Read from a random page in the buffer
-        int page_number = rand() % BUFFER_COUNT;
-        char buffer[BUFFER_SIZE];
-        strncpy(buffer, sharedBuffer[page_number].data, BUFFER_SIZE);
-        logAction("reader_log.txt", "Read", page_number);
+        WaitForSingleObject(canRead, INFINITE);
+        WaitForSingleObject(mutex, INFINITE);
 
-        ReleaseMutex(mutex);                    // Release exclusive access
-        ReleaseSemaphore(canWrite, 1, NULL);    // Signal that writing can be done
+        startTime = timeGetTime(); // Update the start time after acquiring the lock
+        logAction("logs/reader_log.txt", "Start Reading", page_number, startTime);
+
+        Sleep(rand() % 1000 + 500);
+
+        endTime = timeGetTime();
+        logAction("logs/reader_log.txt", "End Reading", page_number, endTime);
+
+        ReleaseMutex(mutex);
+        ReleaseSemaphore(canWrite, 1, NULL);
     }
 
     // Cleanup
@@ -88,10 +97,9 @@ int main() {
     return 0;
 }
 
-void logAction(const char* filename, const char* action, int page) {
+void logAction(const char* filename, const char* action, int page, DWORD time) {
     FILE *file = fopen(filename, "a");
     if (file != NULL) {
-        DWORD time = timeGetTime();
         fprintf(file, "%lu, %s, %d\n", time, action, page);
         fclose(file);
     }
