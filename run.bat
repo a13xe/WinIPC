@@ -37,7 +37,8 @@ echo.
 echo ===========================================
 echo Meanwhile installing matplotlib
 echo ===========================================
-pip install matplotlib
+python.exe -m pip install --upgrade pip
+pip install matplotlib pandas
 echo ===========================================
 echo.
 echo.
@@ -48,9 +49,9 @@ echo.
 echo.
 
 echo ===========================================
-echo Plotting graphs
-echo ===========================================
+echo Plotting graphs . . .
 python plotting_graphs/plot_state_changes.py
 python plotting_graphs/plot_buffer_memory_usage.py
+echo ===========================================
 echo Finnished.
 pause

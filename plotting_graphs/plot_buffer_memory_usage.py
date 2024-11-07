@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# Function to read and process log file
 def process_log(file_path):
     times, actions, pages = [], [], []
     start_time = None
@@ -11,16 +10,14 @@ def process_log(file_path):
             time = int(time)
             if start_time is None:
                 start_time = time
-            times.append((time - start_time) / 1000000)  # Convert to seconds
+            times.append((time - start_time) / 1000000)
             actions.append(action)
             pages.append(int(page))
     return pd.DataFrame({'Time': times, 'Action': actions, 'Page': pages})
 
-# Process the log files
 reader_log = process_log('logs/reader_log.txt')
 writer_log = process_log('logs/writer_log.txt')
 
-# Plot for buffer memory page usage
 plt.figure(figsize=(10, 5))
 plt.plot(reader_log['Time'], reader_log['Page'], label='Reader')
 plt.plot(writer_log['Time'], writer_log['Page'], label='Writer')

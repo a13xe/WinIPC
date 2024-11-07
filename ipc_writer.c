@@ -7,27 +7,29 @@ int main() {
     srand((unsigned int)time(NULL));
     FILE *logFile = fopen("logs/writer_log.txt", "w");
 
-    // Create/Open a memory-mapped file for shared memory
+    SIZE_T pageSize = getPageSize();
+    const int BUFFER_COUNT = 19;
+    SIZE_T bufferSize = pageSize * BUFFER_COUNT;
+
     HANDLE hMapFile = CreateFileMapping(
-        INVALID_HANDLE_VALUE,       // Use paging file - shared memory
-        NULL,                       // Default security attributes
-        PAGE_READWRITE,             // Read/write access
-        0,                          // Maximum object size (high-order DWORD)
-        sizeof(Page) * BUFFER_COUNT,// Buffer size
-        "SharedBuffer");            // Name of mapping object
+        INVALID_HANDLE_VALUE,
+        NULL,
+        PAGE_READWRITE,
+        0,
+        bufferSize,
+        "SharedBuffer");
 
     if (hMapFile == NULL) {
         printf("Could not create file mapping object (%d).\n", GetLastError());
         return 1;
     }
 
-    // Map a view of the file mapping into the address space of the calling process
     Page* sharedBuffer = (Page*)MapViewOfFile(
-        hMapFile,            // Handle to map object
-        FILE_MAP_ALL_ACCESS, // Read/write permission
-        0,                   
-        0,                   
-        sizeof(Page) * BUFFER_COUNT);
+        hMapFile,
+        FILE_MAP_ALL_ACCESS,
+        0,
+        0,
+        bufferSize);
 
     if (sharedBuffer == NULL) {
         printf("Could not map view of file (%d).\n", GetLastError());
@@ -35,10 +37,17 @@ int main() {
         return 1;
     }
 
-    // Create/Open synchronization objects
+    if (!VirtualLock(sharedBuffer, bufferSize)) {
+        printf("Could not lock pages in memory (%d).\n", GetLastError());
+        UnmapViewOfFile(sharedBuffer);
+        CloseHandle(hMapFile);
+        return 1;
+    }
+
     mutex = CreateMutex(NULL, FALSE, "BufferMutex");
     if (mutex == NULL) {
         printf("Could not create mutex (%d).\n", GetLastError());
+        VirtualUnlock(sharedBuffer, bufferSize);
         UnmapViewOfFile(sharedBuffer);
         CloseHandle(hMapFile);
         return 1;
@@ -48,6 +57,7 @@ int main() {
     if (canRead == NULL) {
         printf("Could not create semaphore (%d).\n", GetLastError());
         CloseHandle(mutex);
+        VirtualUnlock(sharedBuffer, bufferSize);
         UnmapViewOfFile(sharedBuffer);
         CloseHandle(hMapFile);
         return 1;
@@ -58,23 +68,23 @@ int main() {
         printf("Could not create semaphore (%d).\n", GetLastError());
         CloseHandle(canRead);
         CloseHandle(mutex);
+        VirtualUnlock(sharedBuffer, bufferSize);
         UnmapViewOfFile(sharedBuffer);
         CloseHandle(hMapFile);
         return 1;
     }
 
-    // Main loop for writing
     printf("Writing...");
     int page_number;
     for (int i = 0; i < PROCESS_COUNT; i++) {
         startTime = timeGetTime();
-        int page_number = rand() % BUFFER_COUNT;  // Assign a random page number here
+        page_number = rand() % BUFFER_COUNT;
 
         logAction("logs/writer_log.txt", "Waiting to Write", page_number, startTime);
         WaitForSingleObject(canWrite, INFINITE);
         WaitForSingleObject(mutex, INFINITE);
 
-        startTime = timeGetTime(); // Update the start time after acquiring the mutex
+        startTime = timeGetTime();
         logAction("logs/writer_log.txt", "Start Writing", page_number, startTime);
 
         Sleep(rand() % 1000 + 500);
@@ -86,11 +96,11 @@ int main() {
         ReleaseSemaphore(canRead, 1, NULL);
     }
 
-    // Cleanup
     fclose(logFile);
     CloseHandle(canWrite);
     CloseHandle(canRead);
     CloseHandle(mutex);
+    VirtualUnlock(sharedBuffer, bufferSize);
     UnmapViewOfFile(sharedBuffer);
     CloseHandle(hMapFile);
     return 0;

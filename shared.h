@@ -6,16 +6,18 @@
 #include <stdio.h>
 #include <time.h>
 
-#define BUFFER_SIZE 4096 // Size of each buffer page
-#define BUFFER_COUNT 19  // Number of buffer pages
-#define PROCESS_COUNT 32 // Number of iterations for each process
+#define PROCESS_COUNT 32
 
-// Structure representing a page in the buffer
-typedef struct { char data[BUFFER_SIZE]; } Page;
+typedef struct { char* data; } Page;
 
-// Synchronization objects
 HANDLE mutex;
 HANDLE canRead;
 HANDLE canWrite;
+
+SIZE_T getPageSize() {
+    SYSTEM_INFO sysInfo;
+    GetSystemInfo(&sysInfo);
+    return sysInfo.dwPageSize;
+}
 
 #endif

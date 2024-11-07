@@ -1,96 +1,96 @@
-23528515, Waiting to Write, 5
-23528515, Start Writing, 5
-23529400, End Writing, 5
-23529400, Waiting to Write, 11
-23530033, Start Writing, 11
-23530630, End Writing, 11
-23530630, Waiting to Write, 7
-23531291, Start Writing, 7
-23532128, End Writing, 7
-23532129, Waiting to Write, 14
-23532908, Start Writing, 14
-23533781, End Writing, 14
-23533841, Waiting to Write, 13
-23534559, Start Writing, 13
-23536029, End Writing, 13
-23536030, Waiting to Write, 18
-23537354, Start Writing, 18
-23538450, End Writing, 18
-23538476, Waiting to Write, 18
-23539630, Start Writing, 18
-23540653, End Writing, 18
-23540675, Waiting to Write, 15
-23541489, Start Writing, 15
-23542291, End Writing, 15
-23542295, Waiting to Write, 8
-23543433, Start Writing, 8
-23544924, End Writing, 8
-23544931, Waiting to Write, 12
-23545859, Start Writing, 12
-23546761, End Writing, 12
-23546762, Waiting to Write, 13
-23547445, Start Writing, 13
-23548574, End Writing, 13
-23548575, Waiting to Write, 1
-23549174, Start Writing, 1
-23549811, End Writing, 1
-23549817, Waiting to Write, 16
-23550521, Start Writing, 16
-23551542, End Writing, 16
-23551548, Waiting to Write, 3
-23552866, Start Writing, 3
-23554298, End Writing, 3
-23554323, Waiting to Write, 10
-23555483, Start Writing, 10
-23556463, End Writing, 10
-23556464, Waiting to Write, 15
-23557069, Start Writing, 15
-23557938, End Writing, 15
-23557945, Waiting to Write, 6
-23559206, Start Writing, 6
-23560126, End Writing, 6
-23560132, Waiting to Write, 16
-23561000, Start Writing, 16
-23561762, End Writing, 16
-23561763, Waiting to Write, 10
-23563177, Start Writing, 10
-23564272, End Writing, 10
-23564273, Waiting to Write, 17
-23565055, Start Writing, 17
-23566316, End Writing, 17
-23566317, Waiting to Write, 5
-23566847, Start Writing, 5
-23567979, End Writing, 5
-23567980, Waiting to Write, 14
-23569040, Start Writing, 14
-23570545, End Writing, 14
-23570546, Waiting to Write, 16
-23571727, Start Writing, 16
-23572381, End Writing, 16
-23572382, Waiting to Write, 13
-23573892, Start Writing, 13
-23574592, End Writing, 13
-23574593, Waiting to Write, 7
-23575994, Start Writing, 7
-23576740, End Writing, 7
-23576839, Waiting to Write, 15
-23577365, Start Writing, 15
-23578776, End Writing, 15
-23578777, Waiting to Write, 3
-23579426, Start Writing, 3
-23580001, End Writing, 3
-23580002, Waiting to Write, 18
-23580828, Start Writing, 18
-23581434, End Writing, 18
-23581435, Waiting to Write, 14
-23582261, Start Writing, 14
-23583041, End Writing, 14
-23583043, Waiting to Write, 7
-23584383, Start Writing, 7
-23585515, End Writing, 7
-23585516, Waiting to Write, 15
-23586930, Start Writing, 15
-23587722, End Writing, 15
-23587724, Waiting to Write, 17
-23589187, Start Writing, 17
-23590199, End Writing, 17
+1796374671, Waiting to Write, 14
+1796374671, Start Writing, 14
+1796375448, End Writing, 14
+1796375448, Waiting to Write, 10
+1796376216, Start Writing, 10
+1796377619, End Writing, 10
+1796377619, Waiting to Write, 6
+1796379022, Start Writing, 6
+1796379609, End Writing, 6
+1796379609, Waiting to Write, 17
+1796380190, Start Writing, 17
+1796381078, End Writing, 17
+1796381078, Waiting to Write, 14
+1796381958, Start Writing, 14
+1796382608, End Writing, 14
+1796382608, Waiting to Write, 1
+1796383262, Start Writing, 1
+1796384162, End Writing, 1
+1796384164, Waiting to Write, 3
+1796385072, Start Writing, 3
+1796385860, End Writing, 3
+1796385860, Waiting to Write, 2
+1796386653, Start Writing, 2
+1796387967, End Writing, 2
+1796387967, Waiting to Write, 10
+1796389295, Start Writing, 10
+1796390333, End Writing, 10
+1796390333, Waiting to Write, 13
+1796391382, Start Writing, 13
+1796392481, End Writing, 13
+1796392481, Waiting to Write, 8
+1796393577, Start Writing, 8
+1796394810, End Writing, 8
+1796394810, Waiting to Write, 14
+1796396049, Start Writing, 14
+1796397149, End Writing, 14
+1796397149, Waiting to Write, 9
+1796398244, Start Writing, 9
+1796399710, End Writing, 9
+1796399710, Waiting to Write, 14
+1796401177, Start Writing, 14
+1796402110, End Writing, 14
+1796402110, Waiting to Write, 11
+1796403044, Start Writing, 11
+1796403924, End Writing, 11
+1796403924, Waiting to Write, 4
+1796404812, Start Writing, 4
+1796405732, End Writing, 4
+1796405732, Waiting to Write, 4
+1796406651, Start Writing, 4
+1796407426, End Writing, 4
+1796407426, Waiting to Write, 5
+1796408201, Start Writing, 5
+1796408982, End Writing, 5
+1796408982, Waiting to Write, 0
+1796409756, Start Writing, 0
+1796410310, End Writing, 0
+1796410310, Waiting to Write, 16
+1796410877, Start Writing, 16
+1796411988, End Writing, 16
+1796411988, Waiting to Write, 11
+1796413095, Start Writing, 11
+1796414379, End Writing, 11
+1796414379, Waiting to Write, 2
+1796415656, Start Writing, 2
+1796416640, End Writing, 2
+1796416640, Waiting to Write, 2
+1796417620, Start Writing, 2
+1796418493, End Writing, 2
+1796418493, Waiting to Write, 9
+1796419354, Start Writing, 9
+1796420344, End Writing, 9
+1796420344, Waiting to Write, 16
+1796421331, Start Writing, 16
+1796421907, End Writing, 16
+1796421907, Waiting to Write, 1
+1796422479, Start Writing, 1
+1796423084, End Writing, 1
+1796423084, Waiting to Write, 5
+1796423692, Start Writing, 5
+1796424460, End Writing, 5
+1796424460, Waiting to Write, 16
+1796425227, Start Writing, 16
+1796426644, End Writing, 16
+1796426644, Waiting to Write, 1
+1796428050, Start Writing, 1
+1796429523, End Writing, 1
+1796429523, Waiting to Write, 3
+1796430994, Start Writing, 3
+1796432336, End Writing, 3
+1796432336, Waiting to Write, 6
+1796433673, Start Writing, 6
+1796434352, End Writing, 6
+1796434352, Waiting to Write, 10
+1796435043, Start Writing, 10
+1796435781, End Writing, 10

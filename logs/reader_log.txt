@@ -1,96 +1,96 @@
-23529234, Waiting to Read, 8
-23529402, Start Reading, 8
-23530026, End Reading, 8
-23530035, Waiting to Read, 15
-23530632, Start Reading, 15
-23531292, End Reading, 15
-23531293, Waiting to Read, 5
-23532131, Start Reading, 5
-23532909, End Reading, 5
-23532910, Waiting to Read, 11
-23533843, Start Reading, 11
-23534561, End Reading, 11
-23534561, Waiting to Read, 13
-23536032, Start Reading, 13
-23537355, End Reading, 13
-23537356, Waiting to Read, 3
-23538478, Start Reading, 3
-23539632, End Reading, 3
-23539632, Waiting to Read, 10
-23540677, Start Reading, 10
-23541476, End Reading, 10
-23541491, Waiting to Read, 3
-23542297, Start Reading, 3
-23543428, End Reading, 3
-23543435, Waiting to Read, 5
-23544933, Start Reading, 5
-23545857, End Reading, 5
-23545861, Waiting to Read, 0
-23546764, Start Reading, 0
-23547417, End Reading, 0
-23547447, Waiting to Read, 10
-23548577, Start Reading, 10
-23549173, End Reading, 10
-23549176, Waiting to Read, 6
-23549819, Start Reading, 6
-23550500, End Reading, 6
-23550524, Waiting to Read, 8
-23551550, Start Reading, 8
-23552867, End Reading, 8
-23552868, Waiting to Read, 0
-23554325, Start Reading, 0
-23555471, End Reading, 0
-23555485, Waiting to Read, 9
-23556466, Start Reading, 9
-23557070, End Reading, 9
-23557071, Waiting to Read, 2
-23557947, Start Reading, 2
-23559186, End Reading, 2
-23559208, Waiting to Read, 17
-23560134, Start Reading, 17
-23560983, End Reading, 17
-23561002, Waiting to Read, 0
-23561765, Start Reading, 0
-23563178, End Reading, 0
-23563179, Waiting to Read, 14
-23564275, Start Reading, 14
-23565055, End Reading, 14
-23565057, Waiting to Read, 5
-23566319, Start Reading, 5
-23566848, End Reading, 5
-23566849, Waiting to Read, 12
-23567982, Start Reading, 12
-23569041, End Reading, 12
-23569042, Waiting to Read, 17
-23570548, Start Reading, 17
-23571728, End Reading, 17
-23571729, Waiting to Read, 12
-23572384, Start Reading, 12
-23573893, End Reading, 12
-23573894, Waiting to Read, 17
-23574595, Start Reading, 17
-23575903, End Reading, 17
-23575996, Waiting to Read, 17
-23576841, Start Reading, 17
-23577366, End Reading, 17
-23577367, Waiting to Read, 17
-23578780, Start Reading, 17
-23579428, End Reading, 17
-23579428, Waiting to Read, 0
-23580004, Start Reading, 0
-23580829, End Reading, 0
-23580830, Waiting to Read, 18
-23581437, Start Reading, 18
-23582262, End Reading, 18
-23582263, Waiting to Read, 0
-23583045, Start Reading, 0
-23584384, End Reading, 0
-23584385, Waiting to Read, 17
-23585518, Start Reading, 17
-23586931, End Reading, 17
-23586933, Waiting to Read, 1
-23587726, Start Reading, 1
-23589188, End Reading, 1
-23589189, Waiting to Read, 3
-23590203, Start Reading, 3
-23590944, End Reading, 3
+1796374718, Waiting to Read, 14
+1796375437, Start Reading, 14
+1796376204, End Reading, 14
+1796376204, Waiting to Read, 10
+1796377607, Start Reading, 10
+1796379010, End Reading, 10
+1796379010, Waiting to Read, 6
+1796379597, Start Reading, 6
+1796380178, End Reading, 6
+1796380178, Waiting to Read, 17
+1796381067, Start Reading, 17
+1796381947, End Reading, 17
+1796381947, Waiting to Read, 14
+1796382596, Start Reading, 14
+1796383250, End Reading, 14
+1796383250, Waiting to Read, 1
+1796384150, Start Reading, 1
+1796385060, End Reading, 1
+1796385060, Waiting to Read, 3
+1796385848, Start Reading, 3
+1796386642, End Reading, 3
+1796386642, Waiting to Read, 2
+1796387955, Start Reading, 2
+1796389283, End Reading, 2
+1796389283, Waiting to Read, 10
+1796390321, Start Reading, 10
+1796391369, End Reading, 10
+1796391371, Waiting to Read, 13
+1796392470, Start Reading, 13
+1796393565, End Reading, 13
+1796393565, Waiting to Read, 8
+1796394798, Start Reading, 8
+1796396038, End Reading, 8
+1796396038, Waiting to Read, 14
+1796397138, Start Reading, 14
+1796398232, End Reading, 14
+1796398232, Waiting to Read, 9
+1796399698, Start Reading, 9
+1796401165, End Reading, 9
+1796401165, Waiting to Read, 14
+1796402099, Start Reading, 14
+1796403032, End Reading, 14
+1796403032, Waiting to Read, 11
+1796403913, Start Reading, 11
+1796404800, End Reading, 11
+1796404800, Waiting to Read, 4
+1796405720, Start Reading, 4
+1796406639, End Reading, 4
+1796406639, Waiting to Read, 4
+1796407414, Start Reading, 4
+1796408189, End Reading, 4
+1796408189, Waiting to Read, 5
+1796408970, Start Reading, 5
+1796409744, End Reading, 5
+1796409744, Waiting to Read, 0
+1796410299, Start Reading, 0
+1796410866, End Reading, 0
+1796410866, Waiting to Read, 16
+1796411976, Start Reading, 16
+1796413084, End Reading, 16
+1796413084, Waiting to Read, 11
+1796414367, Start Reading, 11
+1796415645, End Reading, 11
+1796415645, Waiting to Read, 2
+1796416628, Start Reading, 2
+1796417609, End Reading, 2
+1796417609, Waiting to Read, 2
+1796418481, Start Reading, 2
+1796419343, End Reading, 2
+1796419343, Waiting to Read, 9
+1796420333, Start Reading, 9
+1796421319, End Reading, 9
+1796421319, Waiting to Read, 16
+1796421896, Start Reading, 16
+1796422468, End Reading, 16
+1796422468, Waiting to Read, 1
+1796423072, Start Reading, 1
+1796423680, End Reading, 1
+1796423680, Waiting to Read, 5
+1796424449, Start Reading, 5
+1796425216, End Reading, 5
+1796425216, Waiting to Read, 16
+1796426632, Start Reading, 16
+1796428038, End Reading, 16
+1796428038, Waiting to Read, 1
+1796429512, Start Reading, 1
+1796430982, End Reading, 1
+1796430982, Waiting to Read, 3
+1796432324, Start Reading, 3
+1796433662, End Reading, 3
+1796433662, Waiting to Read, 6
+1796434341, Start Reading, 6
+1796435032, End Reading, 6
+1796435032, Waiting to Read, 10
+1796435769, Start Reading, 10
+1796436506, End Reading, 10
